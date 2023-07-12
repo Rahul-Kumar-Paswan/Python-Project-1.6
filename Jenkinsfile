@@ -88,9 +88,9 @@ pipeline {
       steps {
         script {
           echo "Deploy to EC2........."
-            def dockerCmd = "docker run -d --name pooja-project -p 3000:3000 rahulkumarpaswan/my-python-project:${IMAGE_NAME}"
+            def dockerCmd = "docker run -d --name ishu-project-1 -p 3000:3000 rahulkumarpaswan/my-python-project:${IMAGE_NAME}"
             sshagent(['ec2-user-Rahul']) {
-                sh "ssh -o StrictHostKeyChecking=no ec2-user@3.109.181.27 ${dockerCmd}"//add ip address of EC2-docker instance 
+                sh "ssh -o StrictHostKeyChecking=no ec2-user@43.205.124.161 ${dockerCmd}"//add ip address of EC2-docker instance 
             }
         }
       }
