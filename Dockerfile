@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.9.16
 COPY . /app
 WORKDIR /app
 RUN python setup.py sdist bdist_wheel
