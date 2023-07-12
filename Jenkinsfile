@@ -97,7 +97,6 @@ pipeline {
     } 
 
 
-    
     stage("Git Commit Update") {
       steps {
         sh 'git config --global user.name "Rahul-Kumar-Paswan"'
